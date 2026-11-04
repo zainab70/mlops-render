@@ -1,0 +1,14 @@
+# What the Hugging Face build may see from the bundle folder (DEPLOY-002). bundle.sh already copies
+# only the needed source; this second guard sends nothing else (not .git, not a stray .env or weights).
+*
+!apps/web
+!services/api
+!services/model
+!start.sh
+!fetch_model.py
+**/.env
+**/.env.*
+**/*.pt
+**/node_modules
+**/.next
+**/__pycache__
